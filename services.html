@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Digital Services & Professional Training | Johnson's Academy</title>
     <meta name="description" content="Explore Johnson's Academy digital services: Graphic Design, Video Editing, Social Media Management, Facebook & Instagram Ads, and Digital Marketing training in Nigeria. Start learning today.">
     <link rel="canonical" href="https://www.johnsonsacademy.com.ng/services.html">
@@ -75,6 +75,7 @@
 
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="navbar">
         <div class="container">
             <div class="logo">
@@ -90,7 +91,7 @@
                 </ul>
                 <a href="contact.html" class="btn btn-primary mobile-drawer-cta">Get Started</a>
             </nav>
-            <div class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <div class="mobile-menu-toggle" role="button" tabindex="0" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -98,6 +99,7 @@
         </div>
     </header>
 
+    <main id="main-content">
     <section class="page-hero">
         <div class="container">
             <h1>Our Digital Services</h1>
@@ -231,6 +233,7 @@
             <a href="contact.html" class="btn btn-primary">Contact Us</a>
         </div>
     </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -277,5 +280,10 @@
     </footer>
 
     <script src="js/script.js" defer></script>
+    <noscript>
+        <style>
+            .hidden { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
 </body>
 </html>

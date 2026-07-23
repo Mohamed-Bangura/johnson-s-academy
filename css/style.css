@@ -73,6 +73,25 @@
    2. RESET & BASE STYLES
    ======================================== */
 
+/* Skip Navigation Link */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: var(--secondary);
+    color: var(--primary);
+    padding: var(--space-2) var(--space-3);
+    z-index: 10000;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    border-radius: 0 0 var(--radius-md) 0;
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -81,6 +100,8 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -90,6 +111,9 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-dark);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 img {
@@ -102,6 +126,7 @@ a {
     text-decoration: none;
     color: inherit;
     transition: color var(--transition-fast);
+    -webkit-tap-highlight-color: transparent;
 }
 
 ul {
@@ -276,6 +301,7 @@ section {
     right: 0;
     z-index: 1000;
     background-color: rgba(8, 27, 51, 0.95);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transition: all var(--transition-base);
 }
@@ -362,6 +388,9 @@ section {
     gap: 5px;
     cursor: pointer;
     padding: var(--space-2);
+    background: none;
+    border: none;
+    z-index: 1001;
 }
 
 .mobile-menu-toggle span {
@@ -369,6 +398,20 @@ section {
     height: 2px;
     background-color: var(--white);
     transition: all var(--transition-base);
+    display: block;
+    transform-origin: center;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* ========================================
@@ -448,6 +491,7 @@ section {
 .about-hero,
 .contact-hero {
     min-height: 65vh;
+    min-height: 65dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1041,6 +1085,7 @@ section {
 .footer-bottom {
     text-align: center;
     padding-top: var(--space-4);
+    padding-bottom: env(safe-area-inset-bottom, 0);
     border-top: 1px solid var(--border-color);
     color: var(--text-muted);
     font-size: 0.9rem;
@@ -1243,27 +1288,27 @@ textarea:focus:not(:focus-visible) {
         transform: translateY(0);
     }
 
-    /* Hero entrance animations */
-    .hero-content h1,
-    .page-hero h1,
-    .about-hero h1,
-    .contact-hero h1 {
+    /* Hero entrance animations - only when JS has loaded */
+    .js-loaded .hero-content h1,
+    .js-loaded .page-hero h1,
+    .js-loaded .about-hero h1,
+    .js-loaded .contact-hero h1 {
         opacity: 0;
         transform: translateY(30px);
         animation: fadeUp 0.8s ease forwards;
     }
 
-    .hero-content p,
-    .page-hero p,
-    .about-hero p,
-    .contact-hero p {
+    .js-loaded .hero-content p,
+    .js-loaded .page-hero p,
+    .js-loaded .about-hero p,
+    .js-loaded .contact-hero p {
         opacity: 0;
         transform: translateY(30px);
         animation: fadeUp 0.8s ease 0.2s forwards;
     }
 
-    .hero-buttons,
-    .cta-buttons {
+    .js-loaded .hero-buttons,
+    .js-loaded .cta-buttons {
         opacity: 0;
         transform: translateY(30px);
         animation: fadeUp 0.8s ease 0.4s forwards;

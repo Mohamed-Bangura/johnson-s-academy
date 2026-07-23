@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <title>
             About Johnson's Academy | Empowering Digital Professionals
         </title>
@@ -83,6 +83,7 @@
 
     </head>
     <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <header class="navbar">
             <div class="container">
                 <div class="logo">
@@ -115,7 +116,7 @@
                     </ul>
                     <a href="contact.html" class="btn btn-primary mobile-drawer-cta">Get Started</a>
                 </nav>
-                <div class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <div class="mobile-menu-toggle" role="button" tabindex="0" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -123,7 +124,7 @@
             </div>
         </header>
 
-        <main>
+        <main id="main-content">
             <section class="about-hero">
                 <div class="container">
                     <div class="hero-content">
@@ -442,5 +443,10 @@
         </footer>
 
         <script src="js/script.js" defer></script>
+        <noscript>
+            <style>
+                .hidden { opacity: 1 !important; transform: none !important; }
+            </style>
+        </noscript>
     </body>
 </html>
