@@ -286,6 +286,7 @@ section {
     justify-content: space-between;
     padding-top: var(--space-3);
     padding-bottom: var(--space-3);
+    min-height: 70px;
 }
 
 .logo {
@@ -701,6 +702,13 @@ section {
     gap: var(--space-4);
 }
 
+@media (max-width: 768px) {
+    .mv-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+}
+
 .process-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -749,6 +757,24 @@ section {
 
 .mv-card h3 {
     color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+    .mv-card {
+        padding: var(--space-3);
+        text-align: left;
+    }
+
+    .mv-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: var(--space-1);
+    }
+
+    .mv-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
 }
 
 /* Learning Process */
@@ -929,7 +955,7 @@ section {
 
 .footer {
     background-color: var(--primary);
-    padding: var(--space-7) 0 var(--space-4);
+    padding: var(--space-7) 0 var(--space-6);
     margin-top: var(--space-8);
 }
 
@@ -1036,9 +1062,30 @@ section {
     }
 }
 
+/* Header CTA: hidden on mobile, shown inside drawer */
+.header-cta {
+    display: inline-flex;
+}
+
+.mobile-drawer-cta {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: flex;
+    }
+
+    /* Compact header on mobile */
+    .navbar .container {
+        padding-top: var(--space-2);
+        padding-bottom: var(--space-2);
+        min-height: 60px;
+    }
+
+    /* Hide the CTA from the top header bar on mobile */
+    .header-cta {
+        display: none;
     }
 
     .nav-menu {
@@ -1047,6 +1094,7 @@ section {
         left: -100%;
         width: 100%;
         height: 100vh;
+        height: 100dvh;
         background-color: var(--bg-dark);
         flex-direction: column;
         padding-top: 100px;
@@ -1063,6 +1111,22 @@ section {
         padding: var(--space-4);
     }
 
+    .nav-menu ul li {
+        text-align: center;
+    }
+
+    .nav-menu ul li a {
+        font-size: 1.25rem;
+        padding: var(--space-2) 0;
+        display: block;
+    }
+
+    /* Show CTA inside mobile drawer */
+    .mobile-drawer-cta {
+        display: inline-flex;
+        margin: var(--space-4) auto 0;
+    }
+
     .navbar .container {
         flex-wrap: wrap;
     }
@@ -1071,7 +1135,7 @@ section {
     .page-hero,
     .about-hero,
     .contact-hero {
-        padding: 100px var(--space-4) 60px;
+        padding: 110px var(--space-4) 60px;
         min-height: 60vh;
     }
 
@@ -1101,11 +1165,11 @@ section {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     /* Mobile button sizing */
@@ -1114,12 +1178,28 @@ section {
         font-size: 15px;
     }
 
+    .hero,
+    .page-hero,
+    .about-hero,
+    .contact-hero {
+        padding: 100px var(--space-2) 48px;
+        min-height: 55vh;
+    }
+
     .hero-buttons {
         flex-direction: column;
     }
 
     .cta-buttons {
         flex-direction: column;
+    }
+
+    .mv-card {
+        padding: var(--space-2);
+    }
+
+    .mv-card p {
+        font-size: 0.85rem;
     }
 }
 
@@ -1268,22 +1348,25 @@ textarea:focus:not(:focus-visible) {
 /* Scroll to Top Button */
 .scroll-top-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
     background-color: var(--secondary);
     color: var(--primary);
     border: none;
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
     transition: all var(--transition-base);
-    z-index: 999;
-    box-shadow: var(--shadow-md);
+    z-index: 1100;
+    box-shadow: var(--shadow-lg);
     will-change: transform, opacity;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .scroll-top-btn.visible {
@@ -1294,6 +1377,15 @@ textarea:focus:not(:focus-visible) {
 .scroll-top-btn:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+    .scroll-top-btn {
+        bottom: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+    }
 }
 
 /* ========================================
