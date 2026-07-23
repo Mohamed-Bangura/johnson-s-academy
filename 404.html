@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Page Not Found | Johnson's Academy</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to Johnson's Academy homepage to explore our digital skills training programs.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <link rel="apple-touch-icon" href="favicon/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-hero {
+            min-height: 70vh;
+            min-height: 70dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-section) 100%);
+            padding: 120px var(--space-4) 64px;
+            text-align: center;
+        }
+        .error-code {
+            font-family: var(--font-heading);
+            font-size: clamp(5rem, 15vw, 10rem);
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-3);
+        }
+        .error-hero h1 {
+            margin-bottom: var(--space-2);
+        }
+        .error-hero p {
+            max-width: 500px;
+            margin: 0 auto var(--space-5);
+        }
+        .error-buttons {
+            display: flex;
+            gap: var(--space-3);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 576px) {
+            .error-hero {
+                padding: 100px var(--space-2) 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <picture>
+                    <source srcset="images/profile/profile.webp" type="image/webp">
+                    <img src="images/profile/profile.png" alt="Johnson's Academy" class="logo-img" width="45" height="45">
+                </picture>
+                <span>Johnson's Academy</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" aria-label="Home page">Home</a></li>
+                    <li><a href="about.html" aria-label="About us">About</a></li>
+                    <li><a href="services.html" aria-label="Our services">Services</a></li>
+                    <li><a href="contact.html" aria-label="Contact us">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary mobile-drawer-cta">Get Started</a>
+            </nav>
+            <div class="mobile-menu-toggle" role="button" tabindex="0" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="error-hero">
+            <div class="container">
+                <div class="error-code" aria-hidden="true">404</div>
+                <h1>Page Not Found</h1>
+                <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+                <div class="error-buttons">
+                    <a href="index.html" class="btn btn-primary">Go to Homepage</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Johnson's Academy</h3>
+                    <p>Professional digital training and services</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Johnson's Academy</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UC1k7MK6wieL0x0RPp7bFbtQ" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow Johnson's Academy on YouTube">
+                        <svg class="social-youtube" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/pauljohnsons_academy" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow Johnson's Academy on Instagram">
+                        <svg class="social-instagram" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/share/1EbCTu1n5e/?mibextid=wwXIfr" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow Johnson's Academy on Facebook">
+                        <svg class="social-facebook" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Johnson's Academy. All Rights Reserved.</p>
+                <p>Designed & Developed by PP Studio Agency</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
